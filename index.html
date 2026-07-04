@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Travel Planner — Discover your next adventure with beautiful destinations worldwide.">
+  <title>Travel Planner | Discover Your Next Adventure</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="#home" class="nav-logo">
+        <span class="logo-icon" aria-hidden="true">✈</span>
+        Travel Planner
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#destinations" class="nav-link">Destinations</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <a href="#destinations" class="btn btn-nav">Explore</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===================== HERO SECTION ===================== -->
+    <section class="hero" id="home">
+      <div class="hero-container">
+        <div class="hero-content">
+          <span class="hero-badge">Your journey starts here</span>
+          <h1 class="hero-title">Discover Your Next Adventure</h1>
+          <p class="hero-description">
+            Search for countries, explore breathtaking destinations, and plan the trip of a lifetime — all in one beautiful place.
+          </p>
+
+          <!-- Search Bar -->
+          <form class="search-form" id="searchForm" role="search" aria-label="Search for a country">
+            <div class="search-wrapper">
+              <span class="search-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"/>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                </svg>
+              </span>
+              <input
+                type="text"
+                id="searchInput"
+                class="search-input"
+                placeholder="Search for a country..."
+                autocomplete="off"
+                aria-label="Country name"
+              >
+              <button type="submit" class="btn btn-search">Search</button>
+            </div>
+          </form>
+
+          <!-- Search Result Message -->
+          <div class="search-result" id="searchResult" role="status" aria-live="polite"></div>
+
+          <a href="#destinations" class="btn btn-secondary hero-cta">View Popular Destinations</a>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-image-wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80"
+              alt="Traveler exploring a scenic mountain landscape"
+              class="hero-image"
+              loading="eager"
+            >
+            <div class="hero-image-overlay"></div>
+          </div>
+          <!-- Floating stat cards -->
+          <div class="floating-card floating-card--1">
+            <span class="floating-icon">🌍</span>
+            <div>
+              <strong>195+</strong>
+              <span>Countries</span>
+            </div>
+          </div>
+          <div class="floating-card floating-card--2">
+            <span class="floating-icon">⭐</span>
+            <div>
+              <strong>4.9</strong>
+              <span>Rating</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== POPULAR DESTINATIONS ===================== -->
+    <section class="destinations" id="destinations">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-label">Popular Destinations</span>
+          <h2 class="section-title">Explore the World</h2>
+          <p class="section-description">Handpicked destinations loved by travelers around the globe.</p>
+        </div>
+
+        <div class="destinations-grid">
+          <!-- Card 1 -->
+          <article class="destination-card">
+            <div class="card-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&q=80" alt="Japan — Mount Fuji and cherry blossoms" loading="lazy">
+              <span class="card-badge">Trending</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Japan</h3>
+              <p class="card-description">Ancient temples, vibrant cities, and serene cherry blossom landscapes.</p>
+              <div class="card-footer">
+                <div class="card-rating" aria-label="Rating 4.8 out of 5">
+                  <span class="stars" aria-hidden="true">★★★★★</span>
+                  <span class="rating-value">4.8</span>
+                </div>
+                <button class="btn btn-card explore-btn" data-country="Japan">Explore</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="destination-card">
+            <div class="card-image-wrapper">
+              <img src="https://images.pexels.com/photos/1796730/pexels-photo-1796730.jpeg" alt="Italy — Venice canals" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Italy</h3>
+              <p class="card-description">Romantic canals, world-class cuisine, and timeless Renaissance art.</p>
+              <div class="card-footer">
+                <div class="card-rating" aria-label="Rating 4.7 out of 5">
+                  <span class="stars" aria-hidden="true">★★★★★</span>
+                  <span class="rating-value">4.7</span>
+                </div>
+                <button class="btn btn-card explore-btn" data-country="Italy">Explore</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="destination-card">
+            <div class="card-image-wrapper">
+              <img src="https://images.pexels.com/photos/1450353/pexels-photo-1450353.jpeg" alt="Thailand — tropical beach paradise" loading="lazy">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Thailand</h3>
+              <p class="card-description">Golden temples, tropical beaches, and unforgettable street food.</p>
+              <div class="card-footer">
+                <div class="card-rating" aria-label="Rating 4.9 out of 5">
+                  <span class="stars" aria-hidden="true">★★★★★</span>
+                  <span class="rating-value">4.9</span>
+                </div>
+                <button class="btn btn-card explore-btn" data-country="Thailand">Explore</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="destination-card">
+            <div class="card-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80" alt="France — Paris Eiffel Tower" loading="lazy">
+              <span class="card-badge card-badge--accent">Top Pick</span>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">France</h3>
+              <p class="card-description">Iconic landmarks, charming villages, and exquisite culinary experiences.</p>
+              <div class="card-footer">
+                <div class="card-rating" aria-label="Rating 4.6 out of 5">
+                  <span class="stars" aria-hidden="true">★★★★★</span>
+                  <span class="rating-value">4.6</span>
+                </div>
+                <button class="btn btn-card explore-btn" data-country="France">Explore</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== WHY CHOOSE US ===================== -->
+    <section class="features" id="about">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-label">Why Choose Us</span>
+          <h2 class="section-title">Travel Smarter</h2>
+          <p class="section-description">Everything you need to plan your perfect getaway.</p>
+        </div>
+
+        <div class="features-grid">
+          <article class="feature-card">
+            <div class="feature-icon-wrapper">
+              <span class="feature-icon" aria-hidden="true">✈</span>
+            </div>
+            <h3 class="feature-title">Easy Travel Planning</h3>
+            <p class="feature-description">Plan your entire trip in minutes with our intuitive search and curated recommendations.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon-wrapper">
+              <span class="feature-icon" aria-hidden="true">🌍</span>
+            </div>
+            <h3 class="feature-title">Explore Countries</h3>
+            <p class="feature-description">Discover hidden gems and popular hotspots across 195+ countries worldwide.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon-wrapper">
+              <span class="feature-icon" aria-hidden="true">💰</span>
+            </div>
+            <h3 class="feature-title">Budget Friendly</h3>
+            <p class="feature-description">Find destinations that match your budget without compromising on experience.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" id="contact">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="#home" class="footer-logo">
+          <span class="logo-icon" aria-hidden="true">✈</span>
+          Travel Planner
+        </a>
+        <p class="footer-tagline">Discover the world, one destination at a time.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social">
+        <h4 class="footer-heading">Follow Us</h4>
+        <div class="social-icons">
+          <a href="#" class="social-link" aria-label="Twitter">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Travel Planner. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Travel Guide Modal (content injected by script.js) -->
+  <div class="modal" id="travelModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal__overlay" id="modalOverlay"></div>
+    <div class="modal__dialog">
+      <div class="modal__content" id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
