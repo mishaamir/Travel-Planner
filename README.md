@@ -29,20 +29,9 @@ A modern, responsive single-page Travel Planner web application built using HTML
 - JavaScript (ES6)
 - REST Countries API
 
-## Project Structure
-
-```
-Travel-Planner/
-│── index.html
-│── style.css
-│── script.js
-│── assets/
-│── README.md
-```
-
 ## Live Demo
 
-Coming Soon
+https://travel-planner-p2kwnsc97-misha-amir.vercel.app/
 
 ## Learning Outcomes
 
