@@ -30,8 +30,7 @@ A modern, responsive single-page Travel Planner web application built using HTML
 - REST Countries API
 
 ## Live Demo
-
-https://travel-planner-p2kwnsc97-misha-amir.vercel.app/
+https://travel-planner-two-pied.vercel.app/
 
 ## Learning Outcomes
 
